@@ -15,6 +15,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { CardComponentComponent } from './component/card-component/card-component.component';
 import { MatRippleModule } from '@angular/material/core';
+import { CardUsingServicesComponent } from './component/card-using-services/card-using-services.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +26,7 @@ import { MatRippleModule } from '@angular/material/core';
     ReplaySubjectDemoComponent,
     SingletonDemoComponent,
     CardComponentComponent,
+    CardUsingServicesComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,27 @@
-<p>singleton-demo works!</p>
+<div style="background-color: #f3f4f6">
+  <div class="flex flex-col justify-center items-center h-[100vh]">
+    <!-- Title -->
+    <div class="content flex justify-between">
+      <h3
+        class="text-xl font-mono text-gray-800"
+        (click)="showRefreshButton = !showRefreshButton"
+      >
+        Component to Component Communication
+      </h3>
+    </div>
+
+    <!-- Main Card -->
+    <div
+      class="!z-5 mt-6 relative flex flex-col rounded-[20px] max-w-[900px] bg-clip-border shadow-3xl shadow-shadow-500 w-full !p-4 3xl:p-![18px] undefined"
+    >
+      <div class="h-full w-full">
+        <div
+          class="relative w-full mb-3 flex gap-8 justify-center rounded-xl p-8"
+        >
+          <app-card-using-services></app-card-using-services>
+          <app-card-using-services></app-card-using-services>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

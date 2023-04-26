@@ -1,0 +1,77 @@
+<div
+  class="!z-5 relative flex flex-col bg-white rounded-[20px] min-w-[300px] bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full !p-4 3xl:p-![18px] undefined"
+>
+  <div class="relative h-full w-full rounded-xl mb-3">
+    <div class="relative w-full">
+      <div
+        class="relative w-full rounded-xl mb-3"
+        style="height: 268px"
+        [class]="selectedColor"
+      ></div>
+      <button
+        class="absolute top-3 right-3 flex items-center justify-center rounded-full bg-white p-2 text-brand-500 hover:cursor-pointer"
+        (click)="refreshColor()"
+      >
+        <div
+          class="flex h-full w-full items-center justify-center rounded-full text-xl hover:bg-gray-50"
+          matTooltip="Refresh"
+        >
+          <mat-icon class="text-pink-500">refresh</mat-icon>
+        </div>
+      </button>
+    </div>
+    <div class="mb-1 flex items-center justify-between px-1 md:items-start">
+      <div class="mb-2">
+        <p class="text-lg font-bold text-zinc-800">Child Component</p>
+        <p class="mt-1 text-sm font-medium text-gray-600 md:mt-2">
+          By Govindram Solanki
+        </p>
+      </div>
+      <div class="flex flex-row-reverse md:mt-2 lg:mt-0">
+        <span
+          class="z-0 ml-px inline-flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-[#E0E5F2] text-xs text-navy-700"
+          >+5</span
+        ><span class="z-10 -mr-3 h-8 w-8 rounded-full border-2 border-white">
+          <img
+            class="h-full w-full rounded-full object-cover"
+            src="https://horizon-tailwind-react-git-tailwind-components-horizon-ui.vercel.app/static/media/avatar1.eeef2af6dfcd3ff23cb8.png"
+            alt=""
+          />
+        </span>
+        <span class="z-10 -mr-3 h-8 w-8 rounded-full border-2 border-white">
+          <img
+            class="h-full w-full rounded-full object-cover"
+            src="https://horizon-tailwind-react-git-tailwind-components-horizon-ui.vercel.app/static/media/avatar2.5692c39db4f8c0ea999e.png"
+            alt=""
+          />
+        </span>
+        <span class="z-10 -mr-3 h-8 w-8 rounded-full border-2 border-white">
+          <img
+            class="h-full w-full rounded-full object-cover"
+            src="https://horizon-tailwind-react-git-tailwind-components-horizon-ui.vercel.app/static/media/avatar3.9f646ac5920fa40adf00.png"
+            alt=""
+          />
+        </span>
+      </div>
+    </div>
+
+    <div class="flex justify-between">
+      <div
+        class="!z-5 mt-2 relative flex justify-center flex-row gap-4 rounded-[20px] bg-clip-border shadow-3xl shadow-shadow-500 w-full bg-white"
+      >
+        <ng-container *ngFor="let clr of colors">
+          <div
+            mat-ripple
+            (click)="setColor(clr)"
+            class="flex justify-center items-center rounded-xl h-6 w-8"
+            [class]="clr"
+          >
+            <mat-icon *ngIf="selectedColor == clr" class="text-white"
+              >check</mat-icon
+            >
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

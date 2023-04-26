@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./card-component.component.scss'],
 })
 export class CardComponentComponent {
-  @Input() color: string | undefined;
+  @Input() color: string = 'bg-green-400';
   @Output() newColorEvent = new EventEmitter<string>();
   colors = [
     'bg-green-400',
