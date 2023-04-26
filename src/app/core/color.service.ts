@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ColorService {
-  public universalSelectedColor = '';
+  public universalSelectedColor = 'bg-orange-400';
 
   constructor() {}
 }

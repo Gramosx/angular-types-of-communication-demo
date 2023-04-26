@@ -15,16 +15,19 @@ export class CardUsingServicesComponent {
     'bg-orange-400',
   ];
 
-  selectedColor = this.colorService.universalSelectedColor;
-  constructor(private colorService: ColorService) {}
+  selectedColor = '';
+
+  constructor(private colorService: ColorService) {
+    this.selectedColor = this.colorService.universalSelectedColor;
+  }
 
   refreshColor() {
     this.selectedColor = this.colorService.universalSelectedColor;
   }
 
   setColor(color: string) {
-    this.selectedColor = color;
     this.colorService.universalSelectedColor = color;
+    this.selectedColor = color;
     // this.refreshColor();
   }
 }
