@@ -5,6 +5,7 @@ import { SingletonDemoComponent } from './singleton-demo/singleton-demo.componen
 import { SubjectDemoComponent } from './subject-demo/subject-demo.component';
 import { BehaviourSubjectDemoComponent } from './behaviour-subject-demo/behaviour-subject-demo.component';
 import { ReplaySubjectDemoComponent } from './replay-subject-demo/replay-subject-demo.component';
+import { ChildParentComponent } from './child-parent/child-parent.component';
 
 const routes: Routes = [
   {
@@ -13,7 +14,7 @@ const routes: Routes = [
   },
   {
     path: 'child-parent',
-    component: ParentChildComponent,
+    component: ChildParentComponent,
   },
   {
     path: 'singleton',

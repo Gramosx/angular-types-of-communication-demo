@@ -1,1 +1,69 @@
-<p>child-parent works!</p>
+<div style="background-color: #f3f4f6">
+  <div class="flex flex-col justify-center items-center h-[100vh]">
+    <!-- Title -->
+    <div class="content flex justify-between mb-3">
+      <h3 class="mb-2 text-xl font-mono text-gray-800">
+        Child to Parent Communication
+      </h3>
+
+      <div class="terminal w-full">
+        <pre>@Output() newIconEvent = new EventEmitter&lt;string&gt;(); </pre>
+      </div>
+    </div>
+
+    <!-- Main Card -->
+    <div
+      class="!z-5 mt-6 relative flex flex-col rounded-[20px] max-w-[900px] bg-white bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full !p-4 3xl:p-![18px] bg-white undefined"
+    >
+      <div class="h-full w-full">
+        <div
+          class="relative w-full bg-zinc-200 mb-3 flex gap-8 justify-center rounded-xl p-8"
+        >
+          <!-- Child Compoment -->
+          <app-card-component
+            [color]="selectedColor"
+            (newColorEvent)="setColorFromChild($event)"
+          ></app-card-component>
+          <!-- <button
+            class="absolute top-3 right-3 flex items-center justify-center rounded-full bg-white p-2 text-brand-500 hover:cursor-pointer"
+          >
+            <div
+              class="flex h-full w-full items-center justify-center rounded-full text-xl hover:bg-gray-50"
+              matTooltip="Refresh"
+            >
+              <mat-icon class="text-pink-500">refresh</mat-icon>
+            </div>
+          </button> -->
+        </div>
+        <div class="mb-1 flex items-center justify-between px-1 md:items-start">
+          <div class="">
+            <p class="text-lg font-bold text-zinc-700">Parent Compnent</p>
+            <p class="mt-1 text-sm font-medium text-gray-600">
+              By Govindram Solanki
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Color Selector -->
+    <div class="content flex justify-between mb-3">
+      <div
+        class="!z-5 mt-2 relative flex flex-row gap-4 rounded-[20px] max-w-[900px] bg-clip-border shadow-3xl shadow-shadow-500 w-full !p-4 3xl:p-![18px] bg-white"
+      >
+        <ng-container *ngFor="let color of colors">
+          <div
+            mat-ripple
+            (click)="selectedColor = color"
+            class="flex justify-center items-center rounded-xl w-12 h-8"
+            [class]="color"
+          >
+            <mat-icon *ngIf="selectedColor == color" class="text-white"
+              >check</mat-icon
+            >
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>
