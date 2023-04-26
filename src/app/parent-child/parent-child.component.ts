@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./parent-child.component.scss'],
 })
 export class ParentChildComponent {
-  selectedColor = 'red';
+  selectedColor = 'bg-green-400';
   colors = [
     'bg-green-400',
     'bg-sky-400',
