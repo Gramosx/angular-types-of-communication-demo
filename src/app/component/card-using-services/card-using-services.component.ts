@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ColorService } from 'src/app/core/color.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { ColorService } from 'src/app/core/color.service';
   templateUrl: './card-using-services.component.html',
   styleUrls: ['./card-using-services.component.scss'],
 })
-export class CardUsingServicesComponent {
+export class CardUsingServicesComponent implements OnInit {
   colors = [
     'bg-green-400',
     'bg-sky-400',
@@ -16,8 +16,11 @@ export class CardUsingServicesComponent {
   ];
 
   selectedColor = '';
+  showRefreshButton = false;
 
-  constructor(private colorService: ColorService) {
+  constructor(private colorService: ColorService) {}
+
+  ngOnInit(): void {
     this.selectedColor = this.colorService.universalSelectedColor;
   }
 

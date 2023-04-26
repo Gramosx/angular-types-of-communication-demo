@@ -8,22 +8,10 @@
         style="height: 268px"
         [class]="selectedColor"
       ></div>
-      <button
-        class="absolute top-3 right-3 flex items-center justify-center rounded-full bg-white p-2 text-brand-500 hover:cursor-pointer"
-        (click)="refreshColor()"
-        *ngIf="showRefreshButton"
-      >
-        <div
-          class="flex h-full w-full items-center justify-center rounded-full text-xl hover:bg-gray-50"
-          matTooltip="Refresh"
-        >
-          <mat-icon class="text-pink-500">refresh</mat-icon>
-        </div>
-      </button>
     </div>
     <div class="mb-1 flex items-center justify-between px-1 md:items-start">
       <div class="mb-2">
-        <p class="text-lg font-bold text-zinc-800">Child Component</p>
+        <p class="text-lg font-bold text-zinc-800">{{ title | titlecase }}</p>
         <p
           class="mt-1 text-sm font-medium text-gray-600 md:mt-2"
           (click)="showRefreshButton = !showRefreshButton"
@@ -76,6 +64,24 @@
           </div>
         </ng-container>
       </div>
+    </div>
+    <div class="flex justify-center mt-4">
+      <button
+        mat-button
+        *ngIf="!subscription"
+        class="p-2 rounded-lg bg-green-400"
+        (click)="subscribe()"
+      >
+        Subscribe
+      </button>
+      <button
+        mat-button
+        *ngIf="subscription"
+        class="p-2 rounded-lg bg-red-500"
+        (click)="unsubscribe()"
+      >
+        UnSubscribe
+      </button>
     </div>
   </div>
 </div>

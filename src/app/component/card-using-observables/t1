@@ -1,0 +1,9 @@
+subscribe() {
+    this.subscription = this.colorService.color$.subscribe((color) => {
+      this.selectedColor = color;
+    });
+  }
+  unsubscribe() {
+    this.subscription?.unsubscribe();
+    this.subscription = undefined;
+  }

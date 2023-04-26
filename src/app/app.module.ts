@@ -16,6 +16,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { CardComponentComponent } from './component/card-component/card-component.component';
 import { MatRippleModule } from '@angular/material/core';
 import { CardUsingServicesComponent } from './component/card-using-services/card-using-services.component';
+import { CardUsingObservablesComponent } from './component/card-using-observables/card-using-observables.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +28,7 @@ import { CardUsingServicesComponent } from './component/card-using-services/card
     SingletonDemoComponent,
     CardComponentComponent,
     CardUsingServicesComponent,
+    CardUsingObservablesComponent,
   ],
   imports: [
     BrowserModule,
