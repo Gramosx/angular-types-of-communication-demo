@@ -6,12 +6,16 @@ import { CardUsingObservablesComponent } from './components/card-using-observabl
 import { MatRippleModule } from '@angular/material/core';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatIconModule } from '@angular/material/icon';
+import { GbToMbPipe } from '../core/pipes/gb-to-mb.pipe';
+import { KbToMbPipe } from '../core/pipes/kb-to-mb.pipe';
 
 @NgModule({
   declarations: [
     CardComponentComponent,
     CardUsingServicesComponent,
     CardUsingObservablesComponent,
+    KbToMbPipe,
+    GbToMbPipe,
   ],
   imports: [CommonModule, MatIconModule, MatTooltipModule, MatRippleModule],
   exports: [
@@ -21,6 +25,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatIconModule,
     MatTooltipModule,
     MatRippleModule,
+    KbToMbPipe,
+    GbToMbPipe,
   ],
 })
 export class SharedModule {}

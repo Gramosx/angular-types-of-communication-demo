@@ -7,7 +7,7 @@
       </h3>
 
       <div class="terminal w-full">
-        <pre><span class="pln">Installed Memory {{ birthday | </span><a href="api/common/DatePipe" class="text-yellow-400"><span class="pln">date</span>:'fullDate'</a><span class="pln"> }}</span></pre>
+        <pre><span class="pln">Installed Memory (MB) :{{ memory | </span><a href="api/common/DatePipe" class="text-yellow-400"><span class="pln">GbToMb</span></a><span class="pln"> }}</span></pre>
       </div>
     </div>
 
@@ -20,8 +20,12 @@
           class="relative w-full bg-zinc-200 mb-3 flex gap-8 justify-center rounded-xl p-8"
         >
           <p class="font-bold text-slate-700">
-            Installed Memory :
+            Installed Memory (GB):
             <span class="text-green-500">{{ memory }}</span>
+          </p>
+          <p class="font-bold text-slate-700">
+            Installed Memory (MB):
+            <span class="text-green-500">{{ memory | gbToMb }}</span>
           </p>
         </div>
         <div class="mb-1 flex items-center justify-between px-1 md:items-start">

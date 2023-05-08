@@ -9,7 +9,8 @@ export class CustomPipesComponent implements OnInit {
   memory: number = 0;
 
   ngOnInit() {
-    const memoryInfo = window.navigator['hardwareConcurrency'] || 0;
-    this.memory = Number((memoryInfo / 1024).toFixed(2));
+    const navigatorInfo: any = window.navigator;
+
+    this.memory = Number(navigatorInfo['deviceMemory']) || 0;
   }
 }
