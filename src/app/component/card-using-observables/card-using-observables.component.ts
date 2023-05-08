@@ -17,8 +17,8 @@ export class CardUsingObservablesComponent {
   ];
 
   selectedColor = '';
-  showRefreshButton = false;
   subscription: Subscription | undefined;
+
   @Input() title: string = '';
   constructor(private colorService: ColorSubjectService) {}
 

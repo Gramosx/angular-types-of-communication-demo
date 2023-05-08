@@ -5,7 +5,7 @@ import { BehaviorSubject, ReplaySubject, Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class ColorSubjectService {
-  private colorSubject = new Subject<string>();
+  private colorSubject = new BehaviorSubject<string>('bg-black');
 
   get color$() {
     return this.colorSubject.asObservable();
