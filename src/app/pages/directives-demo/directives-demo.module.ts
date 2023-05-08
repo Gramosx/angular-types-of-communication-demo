@@ -19,4 +19,4 @@ const routes: Routes = [
   declarations: [ParentChildComponent, ChildParentComponent],
   imports: [CommonModule, SharedModule, RouterModule.forChild(routes)],
 })
-export class DirectivesDemoModule {}
+export class ComponentCommunicationDemoModule {}

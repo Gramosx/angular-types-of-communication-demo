@@ -15,7 +15,7 @@ const routes: Routes = [
     path: 'directive-demo',
     loadChildren: () =>
       import('./pages/directives-demo/directives-demo.module').then(
-        (m) => m.DirectivesDemoModule
+        (m) => m.ComponentCommunicationDemoModule
       ),
   },
 
@@ -31,6 +31,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/subjects-demo/subjects-demo.module').then(
         (m) => m.SubjectsDemoModule
+      ),
+  },
+  {
+    path: 'pipes',
+    loadChildren: () =>
+      import('./pages/pipes-demo/pipes-demo.module').then(
+        (m) => m.PipesDemoModule
       ),
   },
 ];

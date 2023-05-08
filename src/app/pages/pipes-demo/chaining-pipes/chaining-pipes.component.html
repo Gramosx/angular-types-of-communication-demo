@@ -3,11 +3,11 @@
     <!-- Title -->
     <div class="content flex justify-between mb-3">
       <h3 class="mb-2 text-xl font-mono text-gray-800">
-        Pipes - Transform data
+        Chaining Pipes - Transform data
       </h3>
 
       <div class="terminal w-full">
-        <pre><span class="pln">The hero's birthday is {{ birthday | </span><a href="api/common/DatePipe" class="text-yellow-400"><span class="pln">date</span></a><span class="pln"> }}</span></pre>
+        <pre><span class="pln"> {{ birthday | </span><a href="api/common/DatePipe" class="text-yellow-400"><span class="pln">date</span>:'fullDate' | <span> uppercase</span></a><span class="pln"> }}</span></pre>
       </div>
     </div>
 
@@ -20,7 +20,8 @@
           class="relative w-full bg-zinc-200 mb-3 flex gap-8 justify-center rounded-xl p-8"
         >
           <p class="font-bold text-slate-700">
-            The hero's birthday is {{ birthday | date }}
+            The hero's birthday is
+            {{ birthday | date : "fullDate" | uppercase }}
           </p>
         </div>
         <div class="mb-1 flex items-center justify-between px-1 md:items-start">
