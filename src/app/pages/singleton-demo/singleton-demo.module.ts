@@ -6,7 +6,7 @@ import { SingletonDemoComponent } from './singleton-demo/singleton-demo.componen
 
 const routes: Routes = [
   {
-    path: 'singleton-demo',
+    path: '',
     component: SingletonDemoComponent,
   },
 ];
