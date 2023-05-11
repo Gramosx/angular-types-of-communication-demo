@@ -21,23 +21,5 @@ export class SingletonDemoComponent implements OnInit {
 
   constructor(private http: HttpClient) {}
 
-  ngOnInit(): void {
-    let url =
-      'https://angular-5bdd9-default-rtdb.firebaseio.com/user/-NV-BqZKzmJtY6X4GDfz.json';
-    let body = {
-      email: 'Heet',
-      pass: 132,
-    };
-    this.http
-      .delete(url, {
-        headers: {
-          Authorization: localStorage.getItem('token') || '',
-        },
-      })
-      .subscribe((x: any) => {
-        console.log(x);
-
-        // localStorage.setItem('Gram', JSON.stringify(x));
-      });
-  }
+  ngOnInit(): void {}
 }
