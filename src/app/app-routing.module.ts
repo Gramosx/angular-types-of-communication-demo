@@ -12,6 +12,12 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
+    path: 'user',
+
+    loadChildren: () =>
+      import('./users/users.module').then((x) => x.UsersModule),
+  },
+  {
     path: 'directive-demo',
     loadChildren: () =>
       import('./pages/directives-demo/directives-demo.module').then(

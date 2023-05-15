@@ -1,0 +1,20 @@
+<p>
+  Hello
+  <span *ngIf="user?.role == 'admin'; else temp">{{ user.username }}</span>
+</p>
+<ng-template #temp>
+  <span>World</span>
+</ng-template>
+<p>{{ arr.length }}</p>
+<table *ngIf="user; else temp2">
+  <tr *ngFor="let user of arr">
+    <td>{{ user.username }}</td>
+  </tr>
+</table>
+
+<ng-template #temp2>
+  <p>not logged in</p>
+</ng-template>
+
+<button (click)="logout()">Logout</button>
+<button (click)="login()">login</button>
